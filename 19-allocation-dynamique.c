@@ -31,13 +31,14 @@ int	main (int argc, char *argv[])
 	printf("combien de cases voullez vous remplir : ");
 	scanf("%d",&n );
 
-	int toto[n];
+	int* tab = malloc (n * sizeof (int));
+
 	for (int i = 0; i < n ; i++)
 	{
-		toto[i] = 2 * i + 5;
+		tab[i] = 2 * i + 5;
 	}
 
-	intarray_debugg(toto,n);
-
+	intarray_debugg(tab,n);
+	free (tab);
 	return EXIT_SUCCESS;
 }
