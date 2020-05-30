@@ -3,13 +3,7 @@
 
 int	main (int argc, char *argv[])
 {
-	unsigned char toto;
-	toto = 0;
-	while(toto < 255)
-	{
+	for(unsigned char toto = 0; toto < 255 ; toto++)
 		printf("%c ", toto);
-		toto += 1;
-	}
-
 	return EXIT_SUCCESS;
 }

@@ -19,9 +19,6 @@ int intarray_len(intarray tab);
 /*retourne la concatenation des 2 intarray t& et t2 */
 intarray intarray_concat (intarray T1,intarray T2);
 
-/* swipe between the value of 2 cases pointed by m and n	*/
-intarray intarray_swap(int* m,int* n);
-
 /* sort data of a table from min int to bigger one*/
 intarray intarray_sort1(intarray tab);
 /*calculer la somme de tous les int d un array */

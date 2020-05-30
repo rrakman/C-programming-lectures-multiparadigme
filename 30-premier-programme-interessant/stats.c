@@ -22,7 +22,14 @@ int	main (int argc, char *argv[])
 			printf("\nwarning : \"%s\" this is not valid numbers , we ignore it.\n",argv[i] );
 	}
 
-	tab.len = real_len_of_tab; // bidouillage degeu (stoopid) we gonna learn how to use multi dimentions arrays and make a better solution.
+	tab.len = real_len_of_tab; // bidouillage degueu (stoopid) we gonna learn how to use multi dimentions arrays and make a better solution.
+	if(tab.len == 0)
+	{
+		printf("There is n number here, impossible to calculate stats.\n");
+		intarray_destroy(tab);
+		return EXIT_SUCCESS;
+	}
+
 	printf("\nyou've entered the numbers down here : \n");
 	intarray_debugg(tab);
 	int mini = intarray_get_min(tab);

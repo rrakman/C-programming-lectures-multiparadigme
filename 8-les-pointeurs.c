@@ -4,11 +4,7 @@
 int	main (int argc, char *argv[])
 {
 	char* toto = "Bonjour a tous \n";
-
-	int i =0;
-	while (*(toto+i) != '\0') {
-			printf("%c ",*(toto +i));
-			i = i + 1;
-	}
+	for (int i = 0;toto[i] != '\0';i++)
+			printf("%c ",toto[i]);
 	return EXIT_SUCCESS;
 }

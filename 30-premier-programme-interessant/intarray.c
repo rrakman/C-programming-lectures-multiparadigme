@@ -2,6 +2,7 @@
 #include<stdlib.h>
 
 #include"intarray.h"
+#include"tools.h"
 
 //this gets maxi of an intarray;
 int intarray_get_index_of_maxi_from(intarray tab,int index)
@@ -187,8 +188,6 @@ int intarray_get(intarray tab,int index)
 	return tab.data[index];
 }
 
-
-
 void intarray_destroy(intarray tab)
 {
 	free(tab.data);
@@ -206,16 +205,8 @@ intarray intarray_sort1(intarray tab)
 	for (i = 0; i <= tab.len - 2; i++)
 	{
 		min_indice = intarray_get_index_of_min_from(tab,i);
-		intarray_swap(tab.data + i,tab.data + min_indice);
+		int_swap(tab.data + i,tab.data + min_indice);
 	}
-
-}
-
-intarray intarray_swap(int* m,int* n)
-{
-		int tmp = *m;
-		*m = *n;
-		*n = tmp;
 }
 
 int intarray_sum(intarray tab)

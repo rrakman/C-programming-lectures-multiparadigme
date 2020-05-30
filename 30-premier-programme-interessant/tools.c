@@ -1,15 +1,15 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+#include"intarray.h"
 #include"tools.h"
-/*
-	fonction : string to int.
-	string "442"
-	'4' - 48 = 4
-	'2' - 48 = 2
-   4  * 10 + 4 = 44
-	44 * 10 + 2 = 442
-*/
+
+intarray int_swap(int* m,int* n)
+{
+		int tmp = *m;
+		*m = *n;
+		*n = tmp;
+}
 
 int string_to_int(char* str)
 {
